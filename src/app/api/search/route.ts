@@ -5,7 +5,7 @@ export async function GET(request: any) {
     try {
         // Set CORS headers
         const headers = {
-            "Access-Control-Allow-Origin": "https://f0f2b2tx-3000.inc1.devtunnels.ms/",
+            "Access-Control-Allow-Origin": "https://vnuneye-hjdwlg092-vnuns-projects.vercel.app/",
             "Access-Control-Allow-Methods": "GET, POST",
             "Access-Control-Allow-Headers": "Content-Type, Authorization",
             "Access-Control-Allow-Credentials": "true"
