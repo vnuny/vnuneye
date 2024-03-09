@@ -1,15 +1,12 @@
 import { NextRequest, NextResponse } from "next/server";
 import axios from "axios";
 
-export async function GET(request: any) {
-    const siteBaseUrl = request.url;
-        const url = siteBaseUrl.split("/api")[0];
-        
+export async function GET(request: NextRequest) {
     try {
         // Set CORS headers
         const headers = {
-            "Access-Control-Allow-Origin": 'https://cdn15.t4ce4ma.shop',
-            "Access-Control-Allow-Methods": "GET, POST",
+            "Access-Control-Allow-Origin": "*", // Change this to your specific domain if needed
+            "Access-Control-Allow-Methods": "GET, OPTIONS",
             "Access-Control-Allow-Headers": "Content-Type, Authorization",
             "Access-Control-Allow-Credentials": "true"
         };
@@ -27,6 +24,6 @@ export async function GET(request: any) {
     } catch (error: any) {
         // Handle errors here
         console.error(error);
-        return NextResponse.json({ error: error.message }, { status: 500 });
+        return NextResponse.json({ error: "something went wrong" }, { status: 500 });
     }
 }
