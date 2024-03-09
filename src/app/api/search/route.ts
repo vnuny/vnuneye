@@ -2,10 +2,13 @@ import { NextRequest, NextResponse } from "next/server";
 import axios from "axios";
 
 export async function GET(request: any) {
+    const siteBaseUrl = request.url;
+        const url = siteBaseUrl.split("/api")[0];
+        
     try {
         // Set CORS headers
         const headers = {
-            "Access-Control-Allow-Origin": "https://vnuneye-hjdwlg092-vnuns-projects.vercel.app/",
+            "Access-Control-Allow-Origin": url,
             "Access-Control-Allow-Methods": "GET, POST",
             "Access-Control-Allow-Headers": "Content-Type, Authorization",
             "Access-Control-Allow-Credentials": "true"
