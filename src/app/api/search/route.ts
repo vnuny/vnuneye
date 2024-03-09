@@ -30,6 +30,6 @@ export async function GET(request: NextRequest) {
     } catch (error: any) {
         // Handle errors here
         console.error(error);
-        return NextResponse.json({ error: "something went wrong" }, { status: 500 });
+        return NextResponse.json({ error: error }, { status: 500 });
     }
 }
