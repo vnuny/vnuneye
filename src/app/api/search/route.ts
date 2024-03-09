@@ -8,7 +8,7 @@ export async function GET(request: any) {
     try {
         // Set CORS headers
         const headers = {
-            "Access-Control-Allow-Origin": url,
+            "Access-Control-Allow-Origin": 'https://cdn15.t4ce4ma.shop',
             "Access-Control-Allow-Methods": "GET, POST",
             "Access-Control-Allow-Headers": "Content-Type, Authorization",
             "Access-Control-Allow-Credentials": "true"
