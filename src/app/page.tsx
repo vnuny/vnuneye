@@ -18,7 +18,7 @@ export default function Home() {
   return (
     <main>
       <div className="card">
-        <h2>{JSON.stringify(data)}</h2>
+        
       </div>
     </main>
   );
