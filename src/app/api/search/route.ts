@@ -17,10 +17,16 @@ export async function GET(request: NextRequest) {
         }
 
         // Make the request to the external API
-        const response = await axios.get("https://cdn15.t4ce4ma.shop/AjaxCenter/Searching/inception/");
+        const response = await axios.get("https://cdn15.t4ce4ma.shop/AjaxCenter/Searching/inception/", {
+            headers: {
+                "Content-Type": "application/json",
+                "Access-Control-Allow-Origin": "*",
+            }
+        });
 
         // Return the response with CORS headers
-        return NextResponse.json(response.data, { headers });
+        console.log(request)
+        return NextResponse.json({ data: response.data, NextRequest}, { headers });
     } catch (error: any) {
         // Handle errors here
         console.error(error);
